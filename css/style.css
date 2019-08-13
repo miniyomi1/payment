@@ -1,0 +1,260 @@
+html,body{
+    background-color:#1A2328;
+    color: #C5C5C5;
+    font-family: '微軟正黑體';
+}
+.main{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main-panel{
+    margin-right: 8px;
+    min-width: 480px;
+    width: 30vw;
+    border: 1px solid #185458;
+    padding: 0 50px;
+}
+.side-panel{
+    border: 1px solid #185458;
+    min-width: 250px;
+    width: 15vw;
+    padding-bottom: 20px;
+}
+h2{
+    font-size: 20px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+h2:after{
+    content: '';
+    display: block;
+    width: 56px;
+    height: 1px;
+    background-color: #707070;
+    position: absolute;
+    left: calc(50% - 28px);
+    bottom: -8px;
+}
+.payment-selector{
+    display: flex;
+    justify-content: space-between;
+
+}
+.payment-selector li{
+    width:30%;  
+}
+.payment-btn{
+    border: 1px solid #185458;
+    display: flex;
+    overflow: hidden;
+    align-items: center; 
+
+}
+.payment-btn:hover{
+    cursor: pointer;
+}
+.payment-btn:hover{
+    cursor: pointer;
+    border:1px solid #07C0C3;
+    box-shadow: 0 0 2px 0 #07C0C3
+}
+.payment-btn.active{
+    border:1px solid #07C0C3;
+    box-shadow: 0 0 2px 0 #07C0C3;
+    text-shadow: 0 0 1px #07C0C3;
+}
+.credit-card{
+    display: none;
+}
+.convenience-store{
+    display: none;
+}
+.atm{
+    display: none;
+}
+.payment-btn:hover.payment-btn p {
+    text-shadow: 0 0 1px #07C0C3;
+}
+.payment-btn img{
+
+    margin: 10% 0 10% 0;
+}
+.payment-btn p{
+    display: inline-block;
+    width: 60%;
+    line-height: 1.5em;
+    text-align: center;
+    font-size: 18px;
+    color: #07C0C3;
+}
+.payment-info{
+    border: 1px solid #07C0C3;
+    margin-top: 30px;
+    padding-bottom: 40px;
+}
+.payment-info-panel{
+    margin: 4% 10% 0 10%;
+}
+.payment-info-panel.active{
+    display: block;
+}
+form label{
+    display: block;
+    color: #07C0C3;
+    font-size: 14px;
+}
+.item{
+    margin-bottom: 20px;
+}
+
+form input{
+    width: 75%;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #707070;
+    color: #C5C5C5;
+    padding: 10px 5px 5px 0;
+    letter-spacing: 1pt;
+}
+form input:focus{
+    outline: none;
+}
+input.short{
+    width: 15%;
+    text-align: center;
+}
+input::-webkit-input-placeholder{
+    color: #414141;
+}
+.cvv-btn{
+    display: inline-block;
+    border: 1px solid #707070;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    color: #707070;
+    text-decoration: none;
+    text-align: center;
+}
+/*修改chrome表單自動填入的默認樣式user agent stylesheet     */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active 
+{
+-webkit-text-fill-color: #C5C5C5; /*字體顏色*/
+transition: background-color 5000s ease-in-out 0s; /*透明*/
+}
+.submit-btn{
+    margin: 20px 0px;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #00676E;
+    border:1px solid #185458;
+    color:#FFFFFF;
+    padding: 20px 0;
+    box-shadow: 0 0 3px 0px #07C0C3;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: #185458;
+    transition:.3s;
+}
+.order{
+    margin: 0 20px;
+    font-size: 14px;
+    border-bottom: 1px solid #00676E;
+}
+.order li{
+    margin-bottom: 15px;
+}
+.order span{
+    float: right;
+    color: #07C0C3;
+
+}
+.total-amount{
+    color: #00676E;
+    font-size:14px;
+    margin: 20px;
+}
+.total-amount span{
+    font-size: 22px;
+    float:right;
+    color: #07C0C3;
+}
+input[type="radio"]{
+    display: none;
+}
+.check-market{
+    display: inline-block;
+    margin: 10px 5px 5px 0;
+    position: relative;
+    color: #C5C5C5;
+    
+}
+.check-market:before{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 5px;
+}
+.check-radio:checked + label:after{
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #707070;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+.check-radio:checked{
+    background-color: #f00;
+}
+.memo{
+    border: 1px solid #00676E;
+    list-style-type:decimal;
+    /*數字要在ol裡面*/
+    list-style-position: inside;
+    padding:15px 15px 15px 30px;
+    text-indent:-15px;
+    
+}
+.memo li{
+    font-size: 14px;
+    padding: 5px;
+    line-height: 1.5;
+    
+}
+.memo li a{
+    color: #C5C5C5;
+    text-decoration: underline;
+}
+.check-market:hover{
+    cursor: pointer;
+}
+
+.error{
+    border-bottom: 1px solid #FF8000 !important;
+}
+
+
+input.parsley-error {
+    border: 1px solid red;
+}
+
+.parsley-error-list {
+    color: red;
+}
