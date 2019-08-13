@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>payment</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/parsley.js"></script>
+    <script src="js/all.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="main-panel">
+            <div class="payment">
+                <h2>請選擇付款方式</h2>
+                <ul class="payment-selector">
+                    <li>
+                        <a class="payment-btn cridit-btn active">
+                            <img src="img/card-light.png" alt="">
+                            <p >信用卡<br>刷卡</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="payment-btn market-btn">
+                            <img src="img/shop-light.png" alt="">
+                            <p>超商代碼<br>繳費</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="payment-btn atm-btn">
+                            <img src="img/ATM-light.png" alt="">
+                            <p>ATM<br>轉帳</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="payment-info">
+                    <div class="payment-info-panel credit-card active">
+                        <form parsley-validate>
+                            <div class="item">
+                                <label for="email">付款人信箱</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="item">
+                                <label for="credit-no">信用卡卡號</label>
+                                <input type="text" id="credit-no" maxlength="19" placeholder="1234 5678 8765 4321">
+                            </div>
+                            <div class="item">
+                                <label>有效年月</label>
+                                <input type="text" class="short" pattern="" id="month" placeholder="MM" maxlength="2" οnkeyup="value=value.replace(/[^\d]/g,'')"> 月 /
+                                <input type="text" class="short" id="year" placeholder="YYYY" maxlength="4"> 年
+                            </div>
+                            <div class="item">
+                                <label>背後末三碼
+                                    <a href=""class="cvv-btn">?</a>
+                                </label>
+                                <input type="text" class="short" id ="cvv" maxlength="3" placeholder="CVV"> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="payment-info-panel convenience-store">
+                        <form>
+                            <div class="item">
+                                <label for="email">付款人信箱</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="item">
+                                <label>選擇超商</label>
+                                <input type="radio" class="check-radio" name="shop" value="family-market" id="check-radio1">
+                                <label class="check-market" for="check-radio1">全家</label>
+                                <input type="radio" class="check-radio" name="shop" value="7-11-market" id="check-radio2">
+                                <label class="check-market" for="check-radio2">7-11</label>
+                            </div>
+                        </form>
+                       
+                        <ol class="memo">
+                            <li>請參考繳費流程: <a href="">全家</a>、<a href="">7-11</a></li>
+                            <li>需24小時內完成繳費才算交易成功。</li>
+                            <li>結帳金額已含超商付費的18元手續費。</li>
+                        </ol>
+                    </div>
+                    <div class="payment-info-panel atm">
+                        <form>
+                            <div class="item">
+                                <label for="email">付款人信箱</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="item">
+                                <label>選擇銀行</label>
+                                <input type="radio" class="check-radio" name="bank" value="bank-1" id="esun-bank">
+                                <label class="check-market" for="esun-bank">玉山銀行</label>
+                                <input type="radio" class="check-radio" name="bank" value="bank-2" id="taiwan-bank">
+                                <label class="check-market" for="taiwan-bank">台灣銀行</label>
+                                <input type="radio" class="check-radio" name="bank" value="bank-3" id="taishin-bank">
+                                <label class="check-market" for="taishin-bank">台新銀行</label>
+                            </div>
+                        </form>
+                        <ol class="memo">
+                            <li>如果您持有以上金融機構發行之金融卡，可選擇該金融機構轉帳帳號，可省下銀行轉帳手續費</li>
+                            <li>需24小時內完成繳費才算交易成功。</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <a class="submit-btn">確定付款( $ <span class="total">1500</span> )</a>
+        </div>
+
+        <div class="side-panel">
+            <h2>我的訂單</h2>
+            <div class="order-container">
+                <ul class="order">
+                    <li>流浪金屬史萊姆鎧甲 x 1 <span>1000</span></li>
+                    <li>抗魔戒指 x 1 <span>100</span></li>
+                    <li>萬能藥 x 3 <span>270</span></li>
+                    <li>賢者藥水 x 1 <span>130</span></li>
+                </ul>
+                <div class="total-amount">
+                    <div>
+                        TWD
+                        <span>1500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
