@@ -8,17 +8,25 @@ html,body{
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-direction: row;
+}
+@media screen and (min-width:866px){
+    .main-panel{
+        min-width: 480px;
+        
+    }
+    .side-panel{
+        min-width: 250px;
+        }
 }
 .main-panel{
     margin-right: 8px;
-    min-width: 480px;
     width: 30vw;
     border: 1px solid #185458;
     padding: 0 50px;
 }
 .side-panel{
     border: 1px solid #185458;
-    min-width: 250px;
     width: 15vw;
     padding-bottom: 20px;
 }
@@ -42,7 +50,6 @@ h2:after{
 .payment-selector{
     display: flex;
     justify-content: space-between;
-
 }
 .payment-selector li{
     width:30%;  
@@ -52,7 +59,6 @@ h2:after{
     display: flex;
     overflow: hidden;
     align-items: center; 
-
 }
 .payment-btn:hover{
     cursor: pointer;
@@ -80,7 +86,6 @@ h2:after{
     text-shadow: 0 0 1px #07C0C3;
 }
 .payment-btn img{
-
     margin: 10% 0 10% 0;
 }
 .payment-btn p{
@@ -91,6 +96,41 @@ h2:after{
     font-size: 18px;
     color: #07C0C3;
 }
+@media screen and (max-width:865px){
+    .main{
+        flex-direction: column;
+        align-items: center;;
+        margin-top: 0;
+    }
+    .main-panel{
+        width: 80%;
+        margin: 5% 10%;
+        padding: 0 10px;
+    }
+    .side-panel{
+        width: 80%;
+        margin: 0 10%;
+        margin-bottom: 5%;
+    }
+}
+@media screen and (max-width:585px){
+    .main-panel{
+        width: 90%;
+        margin: 5% 0;
+    }
+    .side-panel{
+        width: 95%;
+        margin: 0 0 5% 0;
+    }
+    .payment-btn img{
+        display: none;
+    }
+    .payment-btn p{
+        margin: 10px auto;
+        width: 100%;
+    }
+}
+
 .payment-info{
     border: 1px solid #07C0C3;
     margin-top: 30px;
@@ -246,15 +286,4 @@ input[type="radio"]{
     cursor: pointer;
 }
 
-.error{
-    border-bottom: 1px solid #FF8000 !important;
-}
 
-
-input.parsley-error {
-    border: 1px solid red;
-}
-
-.parsley-error-list {
-    color: red;
-}
