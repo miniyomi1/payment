@@ -180,15 +180,6 @@ input::-webkit-input-placeholder{
     text-decoration: none;
     text-align: center;
 }
-/*修改chrome表單自動填入的默認樣式user agent stylesheet     */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active 
-{
--webkit-text-fill-color: #C5C5C5; /*字體顏色*/
-transition: background-color 5000s ease-in-out 0s; /*透明*/
-}
 .submit-btn{
     margin: 20px 0px;
     text-align: center;
@@ -284,7 +275,4 @@ input[type="radio"]{
 }
 .check-market:hover{
     cursor: pointer;
-    
 }
-
-
